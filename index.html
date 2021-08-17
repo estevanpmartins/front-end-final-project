@@ -28,7 +28,7 @@
     <div id="game-wrapper">
     <header>
         <h1>Memory Game</h1>
-        <p id="new_game"><a href="index.html">New Game</a></p>
+        <p id="new_game"><a class="btn btn-outline-primary" href="index.html">New Game</a></p>
         <p id="player">&nbsp;</p>	
         <p id="high_score">&nbsp;</p>
         <p id="correct">&nbsp;</p>        	
@@ -36,10 +36,10 @@
     </header>
     <main>         
         <div id="tabs"> 
-            <ul>
-                <li><a href="#tabs-1" onclick="return playgame();">Play Game</a></li>
-                <li><a href="gamerules.html">View Rules</a></li>
-                <li><a href="gamesetting.html">Settings</a></li>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#tabs-1" onclick="return playgame();">Play Game</a></li>
+                <li class="nav-item"><a class="nav-link" href="gamerules.html">View Rules</a></li>
+                <li class="nav-item"><a class="nav-link" href="gamesetting.html">Settings</a></li>
             </ul>
             <div id="tabs-1">
                 <div id="cards"></div>
