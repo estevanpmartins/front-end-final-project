@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 100%;
+    background-color: white;
+    margin: 0 auto;
+    border: 3px solid blue;
+    padding: 0 2em 1em;
+    width: 50%;
+    margin: auto !important;
+    display: block;
+}
+
+h1 { 
+    font-size: 150%;
+    color: blue;
+    margin-bottom: .5em;
+}
+label {
+    float: left;
+    width: 8em;
+}
+input, select { 
+    width: 10em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+input[type=checkbox] { 
+    width: 2em;
+}
+header p {
+	margin: 0 2em 1em 0;
+}
+#new_game, #player, #high_score, #correct {
+	float: left;
+}
+#cards img {
+    height: 100px;
+    width: 80px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    float: left; 
+}
+.clear {
+    clear: both;
+}
+.grid {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+   justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 100px;
+  width: 100px;
+}
+
+.back,
+.front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.front {
+  background: #FFFFFF url('images/back.png') no-repeat center center / contain;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: #FFFFFF;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.match .front {
+ background: #FFFFFF url('images/blank.png') no-repeat center center / contain;
+}
+.divhead
+{
+	width:auto;
+	height:auto;
+	background:#144768;
+	color:#FBE178;
+	padding:10px;
+	font-family: Arial, Helvetica, sans-serif;
+	border:1px double #FBE178;
+}
+.divfoot
+{
+	width:auto;
+	height:auto;
+	background:#144768;
+	color:#FBE178;
+	padding:10px;
+	font-family: Arial, Helvetica, sans-serif;
+	border:1px double #FBE178;
+}

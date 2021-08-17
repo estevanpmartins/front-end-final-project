@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="text/css" rel="stylesheet" href="memory.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Memory Game | Group Project</title>
+
+	<script type="text/javascript">
+        function playgame() {
+		var name1,size1;
+	
+         window.open("game.html")
+     }
+	 function savedata() {
+		var name1,size1;
+		name1=document.abc.t1.value;
+		size1=parseInt(document.abc.s1.value)
+		 localStorage.setItem("pname", name1);
+		 localStorage.setItem("gsize", size1);
+     }
+ </script>
+</head>
+<body>
+    <div id="game-wrapper">
+    <header>
+        <h1>Memory Game</h1>
+        <p id="new_game"><a href="index.html">New Game</a></p>
+        <p id="player">&nbsp;</p>	
+        <p id="high_score">&nbsp;</p>
+        <p id="correct">&nbsp;</p>        	
+        <div class="clear"></div>       
+    </header>
+    <main>         
+        <div id="tabs"> 
+            <ul>
+                <li><a href="#tabs-1" onclick="return playgame();">Play Game</a></li>
+                <li><a href="gamerules.html">View Rules</a></li>
+                <li><a href="gamesetting.html">Settings</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div id="cards"></div>
+            </div>
+            <div id="tabs-2">
+                
+            </div>
+            <div id="tabs-3">
+		<form name="abc"
+                <label for='player_name'>Player name:</label>
+                <input type='text' id='player_name' class="form-control" name="t1" placeholder="John Doe"><br>
+                
+                <label for='num_cards'>Number of cards:</label>
+                <select id='num_cards' class="form-control" name="s1">
+                    <option>48</option>
+                    <option>40</option>
+                    <option>32</option>
+                    <option>24</option>
+                    <option>16</option>
+                    <option>8</option>
+                </select><br>
+                
+                <input type='button' id='save_settings' value='Save Settings' class="btn btn-primary" onclick="return savedata();">
+			</form>
+            </div>
+        </div>
+    </main> 
+</div>
+</body>
+</html>
